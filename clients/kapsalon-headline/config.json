@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "prototype": "static-data-only",
+  "client": "Kapsalon Headline",
+  "slug": "kapsalon-headline",
+  "type": "Hair salon",
+  "city": "Amsterdam",
+  "website": "https://www.headline.salon/",
+  "priority": "Warm",
+  "problem": "Phone-led in sources checked. No online booking calendar, price list, CRM, reminder or loyalty flow was visible in the homepage text reviewed. Do not claim it has no booking system at all - only that none was visible in sources checked.",
+  "contact": {
+    "phone": "+31 20 624 3555",
+    "address": "Herengracht 148-A, Amsterdam"
+  },
+  "theme": {
+    "status": "fallback - to confirm against live site CSS/visual check",
+    "primary": "#1A1A1A",
+    "accent": "#C9A227",
+    "background": "#FFFFFF",
+    "surface": "#F5F1EB",
+    "text": "#1A1A1A",
+    "vibe": "Classic, technical, artistic and established: strong technical base, 40+ years, personal approach, long-serving stable crew"
+  },
+  "hours": {
+    "Tue-Fri": "09:00-18:00",
+    "Sat": "09:00-16:00",
+    "Mon": "Closed",
+    "Sun": "Closed"
+  },
+  "services": [
+    {
+      "name": "Technical cut",
+      "duration_min": 60,
+      "price_sample_eur": 45
+    },
+    {
+      "name": "Cut and colour",
+      "duration_min": 120,
+      "price_sample_eur": 85
+    },
+    {
+      "name": "Styling",
+      "duration_min": 45,
+      "price_sample_eur": 30
+    }
+  ],
+  "staff_sample": [
+    {
+      "id": "staff-1",
+      "role": "Owner / stylist",
+      "name_sample": "Sample Stylist 1"
+    },
+    {
+      "id": "staff-2",
+      "role": "Stylist / therapist",
+      "name_sample": "Sample Stylist 2"
+    }
+  ],
+  "features": [
+    "online_calendar",
+    "automatic_reminders",
+    "rebooking_nudges",
+    "client_history_preferences",
+    "cut_colour_history"
+  ],
+  "booking_flow": [
+    "Choose service",
+    "Choose staff (or 'first available')",
+    "Choose date and time from available slots only",
+    "Enter client details and, where relevant, course/pet notes",
+    "Review summary",
+    "Confirm - see confirm dialog",
+    "Toast: booking confirmed",
+    "Reminder (prototype: simulated)"
+  ],
+  "static_data_note": "All prices, staff names and appointments in this prototype are SAMPLE data, except prices explicitly listed as public prices in the lead reports. Replace with the client's real data before any live use. No real client records are included.",
+  "sample_appointments": [
+    {
+      "id": "apt-sample-1",
+      "client_sample": "Sample Client A",
+      "service": "Technical cut",
+      "date": "2026-11-03",
+      "time": "10:00",
+      "status": "confirmed"
+    },
+    {
+      "id": "apt-sample-2",
+      "client_sample": "Sample Client B",
+      "service": "Technical cut",
+      "date": "2026-11-03",
+      "time": "11:30",
+      "status": "confirmed"
+    }
+  ],
+  "toast_spec": {
+    "success": "Booking confirmed",
+    "error": "Something went wrong - nothing was booked",
+    "info": "Reminder sent (prototype)",
+    "position": "bottom-right",
+    "auto_dismiss_ms": 4000,
+    "must_not_block_action": true
+  },
+  "confirm_dialog_spec": {
+    "cancel_booking": "Show dialog: 'Cancel this booking?' with Cancel / Confirm cancel. Only cancel on Confirm.",
+    "delete_client_or_pet": "Show dialog with what will be deleted. Only delete on Confirm.",
+    "reschedule": "Show summary of old and new slot, Confirm to move."
+  }
+}

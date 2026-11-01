@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "prototype": "static-data-only",
+  "client": "Feel Smooth",
+  "slug": "feel-smooth",
+  "type": "Beauty salon - wax and laser",
+  "city": "Utrecht",
+  "website": "http://www.salonfeelsmooth.nl/",
+  "priority": "Warm",
+  "problem": "A 'Maak een afspraak' route exists, but whether it is a full calendar, a form, or a phone/WhatsApp step was not verified. No verified treatment-course tracking, loyalty/package management, or automated rebooking reminders. Almere second location is unverified - do not claim 2 locations.",
+  "contact": {
+    "phone": "06 4826 7059",
+    "address": "Willem Frederik Hermansstraat 412, 3544 KP Utrecht",
+    "email": "info@salonfeelsmooth.nl"
+  },
+  "theme": {
+    "status": "fallback - to confirm against live site CSS/visual check",
+    "primary": "#5A7D7A",
+    "accent": "#E8A798",
+    "background": "#FDF8F5",
+    "surface": "#FFFFFF",
+    "text": "#24302E",
+    "vibe": "Modern, friendly, smooth and confident wax/laser specialist; confidence and comfort, personal approach"
+  },
+  "hours": {
+    "Tue": "10:00-18:00",
+    "Wed": "10:00-19:00",
+    "Thu": "11:00-19:00",
+    "Fri": "10:00-18:00",
+    "Sat": "10:00-18:00",
+    "Sun": "10:30-18:00",
+    "Mon": "Not listed - do not assume closed"
+  },
+  "services": [
+    {
+      "name": "Waxing session",
+      "duration_min": 30,
+      "price_sample_eur": 30
+    },
+    {
+      "name": "Laser hair removal session",
+      "duration_min": 45,
+      "price_sample_eur": 65
+    },
+    {
+      "name": "Facial treatment",
+      "duration_min": 60,
+      "price_sample_eur": 55
+    },
+    {
+      "name": "Body treatment",
+      "duration_min": 60,
+      "price_sample_eur": 60
+    }
+  ],
+  "staff_sample": [
+    {
+      "id": "staff-1",
+      "role": "Owner / stylist",
+      "name_sample": "Sample Stylist 1"
+    },
+    {
+      "id": "staff-2",
+      "role": "Stylist / therapist",
+      "name_sample": "Sample Stylist 2"
+    }
+  ],
+  "features": [
+    "booking_route_enhancement_or_calendar",
+    "treatment_course_tracking",
+    "package_management_sample",
+    "automatic_rebooking_reminders",
+    "client_history_view"
+  ],
+  "booking_flow": [
+    "Choose service",
+    "Choose staff (or 'first available')",
+    "Choose date and time from available slots only",
+    "Enter client details and, where relevant, course/pet notes",
+    "Review summary",
+    "Confirm - see confirm dialog",
+    "Toast: booking confirmed",
+    "Reminder (prototype: simulated)"
+  ],
+  "static_data_note": "All prices, staff names and appointments in this prototype are SAMPLE data, except prices explicitly listed as public prices in the lead reports. Replace with the client's real data before any live use. No real client records are included.",
+  "sample_appointments": [
+    {
+      "id": "apt-sample-1",
+      "client_sample": "Sample Client A",
+      "service": "Waxing session",
+      "date": "2026-11-03",
+      "time": "10:00",
+      "status": "confirmed"
+    },
+    {
+      "id": "apt-sample-2",
+      "client_sample": "Sample Client B",
+      "service": "Waxing session",
+      "date": "2026-11-03",
+      "time": "11:30",
+      "status": "confirmed"
+    }
+  ],
+  "toast_spec": {
+    "success": "Booking confirmed",
+    "error": "Something went wrong - nothing was booked",
+    "info": "Reminder sent (prototype)",
+    "position": "bottom-right",
+    "auto_dismiss_ms": 4000,
+    "must_not_block_action": true
+  },
+  "confirm_dialog_spec": {
+    "cancel_booking": "Show dialog: 'Cancel this booking?' with Cancel / Confirm cancel. Only cancel on Confirm.",
+    "delete_client_or_pet": "Show dialog with what will be deleted. Only delete on Confirm.",
+    "reschedule": "Show summary of old and new slot, Confirm to move."
+  }
+}

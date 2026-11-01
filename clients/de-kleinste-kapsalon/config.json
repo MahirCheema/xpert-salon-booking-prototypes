@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "prototype": "static-data-only",
+  "client": "De Kleinste Kapsalon",
+  "slug": "de-kleinste-kapsalon",
+  "type": "Hair salon",
+  "city": "Rotterdam",
+  "website": "http://www.dekleinstekapsalon.nl/",
+  "priority": "Warm",
+  "problem": "Phone-only booking: site says call and ask for 'Osman'. No online calendar, CRM, reminder or loyalty flow was visible. Homepage also warns online bookings not confirmed by mail/phone are not taken, and the salon may be closed for ambulant work - call before visiting.",
+  "contact": {
+    "phone": "06-23937985",
+    "address": "Lelienstein 102, 3085 DS Rotterdam",
+    "email": "contact@dekleinstekapsalon.nl"
+  },
+  "theme": {
+    "status": "fallback - to confirm against live site CSS/visual check",
+    "primary": "#8C4A2F",
+    "accent": "#E0A458",
+    "background": "#FFF8F0",
+    "surface": "#FFFFFF",
+    "text": "#2B2118",
+    "vibe": "Small, personal, warm, humorous, neighbourhood: 'letterlijk klein maar fijn!'"
+  },
+  "hours": {
+    "Mon": "Closed",
+    "Tue": "13:00-17:00",
+    "Wed": "13:00-17:00 (+ extra by appointment 17:00-20:00)",
+    "Thu": "By appointment",
+    "Fri": "09:00-17:00 (+ extra 17:00-20:00)",
+    "Sat": "09:00-15:00",
+    "Sun": "Closed"
+  },
+  "services": [
+    {
+      "name": "Cut",
+      "duration_min": 45,
+      "price_sample_eur": 28
+    },
+    {
+      "name": "Cut and colour",
+      "duration_min": 120,
+      "price_sample_eur": 65
+    },
+    {
+      "name": "Styling",
+      "duration_min": 30,
+      "price_sample_eur": 20
+    }
+  ],
+  "staff_sample": [
+    {
+      "id": "staff-1",
+      "role": "Owner / stylist",
+      "name_sample": "Sample Stylist 1"
+    },
+    {
+      "id": "staff-2",
+      "role": "Stylist / therapist",
+      "name_sample": "Sample Stylist 2"
+    }
+  ],
+  "features": [
+    "online_calendar",
+    "call_confirmation_flow",
+    "automatic_reminders",
+    "rebooking_nudges",
+    "client_history_preferences"
+  ],
+  "booking_flow": [
+    "Choose service",
+    "Choose staff (or 'first available')",
+    "Choose date and time from available slots only",
+    "Enter client details and, where relevant, course/pet notes",
+    "Review summary",
+    "Confirm - see confirm dialog",
+    "Toast: booking confirmed",
+    "Reminder (prototype: simulated)"
+  ],
+  "static_data_note": "All prices, staff names and appointments in this prototype are SAMPLE data, except prices explicitly listed as public prices in the lead reports. Replace with the client's real data before any live use. No real client records are included.",
+  "sample_appointments": [
+    {
+      "id": "apt-sample-1",
+      "client_sample": "Sample Client A",
+      "service": "Cut",
+      "date": "2026-11-03",
+      "time": "10:00",
+      "status": "confirmed"
+    },
+    {
+      "id": "apt-sample-2",
+      "client_sample": "Sample Client B",
+      "service": "Cut",
+      "date": "2026-11-03",
+      "time": "11:30",
+      "status": "confirmed"
+    }
+  ],
+  "toast_spec": {
+    "success": "Booking confirmed",
+    "error": "Something went wrong - nothing was booked",
+    "info": "Reminder sent (prototype)",
+    "position": "bottom-right",
+    "auto_dismiss_ms": 4000,
+    "must_not_block_action": true
+  },
+  "confirm_dialog_spec": {
+    "cancel_booking": "Show dialog: 'Cancel this booking?' with Cancel / Confirm cancel. Only cancel on Confirm.",
+    "delete_client_or_pet": "Show dialog with what will be deleted. Only delete on Confirm.",
+    "reschedule": "Show summary of old and new slot, Confirm to move."
+  }
+}

@@ -4,7 +4,7 @@ Prototype-only booking systems for Dutch hair, beauty and animal-grooming salons
 
 **This repo is a prototype, not a live system.** All data is static/sample data. No real client records, payments, or live bookings are included. Replace sample data with the client's real data, and complete the production checklist in Phases.md, before any live use.
 
-## Clients in this repo (8)
+## Clients in this repo (12)
 
 | Client | Slug | Problem in one line |
 |---|---|---|
@@ -16,6 +16,10 @@ Prototype-only booking systems for Dutch hair, beauty and animal-grooming salons
 | Trimsalon het Hofje, Haarlem | `trimsalon-het-hofje` | Phone-only; pre-visit medical/coat info by phone |
 | Schoonheidssalon Yourbeauty, Breda | `salonyourbeauty` | No booking or treatment-course tracking |
 | Kapsalon van Haaren, Nijmegen | `kapsalon-van-haaren` | Appointment-only by phone/WhatsApp; no calendar |
+| Polat Beauty, Eindhoven | `polat-beauty` | Directory-led; no verified booking/course tracking |
+| De Kleinste Kapsalon, Rotterdam | `de-kleinste-kapsalon` | Phone-only, ask for Osman; no calendar/CRM |
+| Feel Smooth, Utrecht | `feel-smooth` | Appointment route unverified; no course tracking |
+| Kapsalon Headline, Amsterdam | `kapsalon-headline` | Phone-led; no visible calendar/CRM in sources checked |
 
 Each client has its own folder under `clients/<slug>/` with `config.json` (business, problem, theme, hours, services, features, booking flow, toast spec, confirm-dialog spec, sample appointments) and a short `README.md`.
 
