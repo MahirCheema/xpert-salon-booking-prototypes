@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "prototype": "static-data-only",
+  "client": "Violetta's Dog Grooming",
+  "slug": "violettas-dog-grooming",
+  "type": "Animal grooming - dogs",
+  "city": "Zuidhorn",
+  "website": "https://trimsalonzuidhorn.nl/index-en.html",
+  "priority": "Hot",
+  "problem": "Solo, appointment-only, message-first. All bookings and intake arrive by message/inbox, with no calendar, CRM or reminders. A page on the site said it was under development.",
+  "contact": {
+    "phone": "Not found in sources checked",
+    "address": "Zuidhorn, Groningen"
+  },
+  "theme": {
+    "status": "fallback - to confirm against live site CSS/visual check",
+    "primary": "#C96F4A",
+    "accent": "#7A8B6F",
+    "background": "#FFF9F2",
+    "surface": "#FFFFFF",
+    "text": "#2B2B2B",
+    "vibe": "Simple, personal, friendly; price list and long personal story, shelter project"
+  },
+  "hours": {
+    "Mon-Fri": "09:00-17:00",
+    "Sat": "By appointment",
+    "Sun": "Closed"
+  },
+  "services": [
+    {
+      "name": "Full groom - small dog",
+      "duration_min": 120,
+      "price_sample_eur": 55
+    },
+    {
+      "name": "Full groom - medium dog",
+      "duration_min": 150,
+      "price_sample_eur": 85
+    },
+    {
+      "name": "Full groom - large dog",
+      "duration_min": 180,
+      "price_sample_eur": 115
+    },
+    {
+      "name": "Wash only",
+      "duration_min": 60,
+      "price_sample_eur": 35
+    },
+    {
+      "name": "Nails",
+      "duration_min": 20,
+      "price_sample_eur": 15
+    },
+    {
+      "name": "Ears",
+      "duration_min": 15,
+      "price_sample_eur": 10
+    }
+  ],
+  "staff_sample": [
+    {
+      "id": "staff-1",
+      "role": "Owner / stylist",
+      "name_sample": "Sample Stylist 1"
+    },
+    {
+      "id": "staff-2",
+      "role": "Stylist / groomer",
+      "name_sample": "Sample Stylist 2"
+    }
+  ],
+  "features": [
+    "online_calendar",
+    "message_first_intake",
+    "pet_profile_breed_coat_notes",
+    "cancellation_policy_24h",
+    "automatic_reminders",
+    "rebooking_nudge"
+  ],
+  "booking_flow": [
+    "Choose service",
+    "Choose staff (or 'first available')",
+    "Choose date and time from available slots only",
+    "Enter client details and, where relevant, pet / skin / pre-visit notes",
+    "Review summary",
+    "Confirm - see confirm dialog",
+    "Toast: booking confirmed",
+    "Reminder (prototype: simulated)"
+  ],
+  "static_data_note": "All prices, staff names and appointments in this prototype are SAMPLE data, except prices explicitly listed as public prices in the lead reports. Replace with the client's real data before any live use. No real client records are included.",
+  "sample_appointments": [
+    {
+      "id": "apt-sample-1",
+      "client_sample": "Sample Client A",
+      "service": "Full groom - small dog",
+      "date": "2026-11-03",
+      "time": "10:00",
+      "status": "confirmed"
+    },
+    {
+      "id": "apt-sample-2",
+      "client_sample": "Sample Client B",
+      "service": "Full groom - small dog",
+      "date": "2026-11-03",
+      "time": "11:30",
+      "status": "confirmed"
+    }
+  ],
+  "toast_spec": {
+    "success": "Booking confirmed",
+    "error": "Something went wrong - nothing was booked",
+    "info": "Reminder sent (prototype)",
+    "position": "bottom-right",
+    "auto_dismiss_ms": 4000,
+    "must_not_block_action": true
+  },
+  "confirm_dialog_spec": {
+    "cancel_booking": "Show dialog: 'Cancel this booking?' with Cancel / Confirm cancel. Only cancel on Confirm.",
+    "delete_client_or_pet": "Show dialog with what will be deleted. Only delete on Confirm.",
+    "reschedule": "Show summary of old and new slot, Confirm to move."
+  }
+}

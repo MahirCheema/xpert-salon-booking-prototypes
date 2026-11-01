@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "prototype": "static-data-only",
+  "client": "Kapsalon Faya",
+  "slug": "kapsalon-faya",
+  "type": "Hair salon",
+  "city": "Groningen",
+  "website": "https://kapsalonfaya.nl/",
+  "priority": "Hot",
+  "problem": "Site says 'Loop gerust binnen of bel voor een afspraak' - walk in or call. No online booking widget was visible, price list aside.",
+  "contact": {
+    "phone": "+31 50 364 6273",
+    "address": "Kerklaan 92, 9717 HG Groningen"
+  },
+  "theme": {
+    "status": "fallback - to confirm against live site CSS/visual check",
+    "primary": "#B85C7A",
+    "accent": "#2B2B2B",
+    "background": "#FFF8FA",
+    "surface": "#FFFFFF",
+    "text": "#2B2B2B",
+    "vibe": "Friendly, personal, informal; first-person welcome, simple cut/colour/style and price blocks"
+  },
+  "hours": {
+    "Mon-Sat": "09:00-18:00",
+    "Sun": "Closed"
+  },
+  "services": [
+    {
+      "name": "Cut - adult",
+      "duration_min": 45,
+      "price_eur": 28,
+      "price_from_2027_eur": 30
+    },
+    {
+      "name": "Cut - student / child",
+      "duration_min": 45,
+      "price_eur": 25,
+      "price_from_2027_eur": 27
+    },
+    {
+      "name": "Colour",
+      "duration_min": 90,
+      "price_from_eur": 40
+    }
+  ],
+  "staff_sample": [
+    {
+      "id": "staff-1",
+      "role": "Owner / stylist",
+      "name_sample": "Sample Stylist 1"
+    },
+    {
+      "id": "staff-2",
+      "role": "Stylist / groomer",
+      "name_sample": "Sample Stylist 2"
+    }
+  ],
+  "features": [
+    "online_calendar",
+    "per_service_times",
+    "automatic_reminders",
+    "next_cut_rebooking_nudge"
+  ],
+  "booking_flow": [
+    "Choose service",
+    "Choose staff (or 'first available')",
+    "Choose date and time from available slots only",
+    "Enter client details and, where relevant, pet / skin / pre-visit notes",
+    "Review summary",
+    "Confirm - see confirm dialog",
+    "Toast: booking confirmed",
+    "Reminder (prototype: simulated)"
+  ],
+  "static_data_note": "All prices, staff names and appointments in this prototype are SAMPLE data, except prices explicitly listed as public prices in the lead reports. Replace with the client's real data before any live use. No real client records are included.",
+  "sample_appointments": [
+    {
+      "id": "apt-sample-1",
+      "client_sample": "Sample Client A",
+      "service": "Cut - adult",
+      "date": "2026-11-03",
+      "time": "10:00",
+      "status": "confirmed"
+    },
+    {
+      "id": "apt-sample-2",
+      "client_sample": "Sample Client B",
+      "service": "Cut - adult",
+      "date": "2026-11-03",
+      "time": "11:30",
+      "status": "confirmed"
+    }
+  ],
+  "toast_spec": {
+    "success": "Booking confirmed",
+    "error": "Something went wrong - nothing was booked",
+    "info": "Reminder sent (prototype)",
+    "position": "bottom-right",
+    "auto_dismiss_ms": 4000,
+    "must_not_block_action": true
+  },
+  "confirm_dialog_spec": {
+    "cancel_booking": "Show dialog: 'Cancel this booking?' with Cancel / Confirm cancel. Only cancel on Confirm.",
+    "delete_client_or_pet": "Show dialog with what will be deleted. Only delete on Confirm.",
+    "reschedule": "Show summary of old and new slot, Confirm to move."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "prototype": "static-data-only",
+  "client": "Schoonheidssalon Yourbeauty",
+  "slug": "salonyourbeauty",
+  "type": "Beauty salon",
+  "city": "Princenhage, Breda",
+  "website": "http://salonyourbeauty.nl/",
+  "priority": "Warm",
+  "problem": "Email/phone only, no online booking widget. Repeat, course-based skin treatments with a skin analysis each time, but no way to book, track a treatment course, or remind a client when the next session is due.",
+  "contact": {
+    "phone": "+31 6 24 39 33 68",
+    "address": "Nieuwe Heilaarstraat 39, Princenhage, Breda",
+    "email": "info@salonyourbeauty.nl"
+  },
+  "theme": {
+    "status": "fallback - to confirm against live site CSS/visual check",
+    "primary": "#D9A7B0",
+    "accent": "#8FA98F",
+    "background": "#FFF9F7",
+    "surface": "#FFFFFF",
+    "text": "#2B2B2B",
+    "vibe": "Calm, wellness, elegant; skin-analysis emphasis, treatment photos"
+  },
+  "hours": {
+    "Mon-Fri": "09:00-18:00",
+    "Sat": "By appointment",
+    "Sun": "Closed"
+  },
+  "services": [
+    {
+      "name": "Kalahari facial",
+      "duration_min": 60,
+      "price_eur_min": 51.5,
+      "price_eur_max": 75
+    },
+    {
+      "name": "Waxing",
+      "duration_min": 30,
+      "price_sample_eur": 25
+    },
+    {
+      "name": "Brow / lash styling",
+      "duration_min": 30,
+      "price_sample_eur": 20
+    },
+    {
+      "name": "Massage",
+      "duration_min": 45,
+      "price_sample_eur": 40
+    },
+    {
+      "name": "Make-up",
+      "duration_min": 45,
+      "price_sample_eur": 45
+    }
+  ],
+  "staff_sample": [
+    {
+      "id": "staff-1",
+      "role": "Owner / stylist",
+      "name_sample": "Sample Stylist 1"
+    },
+    {
+      "id": "staff-2",
+      "role": "Stylist / groomer",
+      "name_sample": "Sample Stylist 2"
+    }
+  ],
+  "features": [
+    "online_calendar",
+    "treatment_course_tracking",
+    "skin_analysis_notes_per_visit",
+    "automatic_rebooking_reminders",
+    "client_history_view"
+  ],
+  "booking_flow": [
+    "Choose service",
+    "Choose staff (or 'first available')",
+    "Choose date and time from available slots only",
+    "Enter client details and, where relevant, pet / skin / pre-visit notes",
+    "Review summary",
+    "Confirm - see confirm dialog",
+    "Toast: booking confirmed",
+    "Reminder (prototype: simulated)"
+  ],
+  "static_data_note": "All prices, staff names and appointments in this prototype are SAMPLE data, except prices explicitly listed as public prices in the lead reports. Replace with the client's real data before any live use. No real client records are included.",
+  "sample_appointments": [
+    {
+      "id": "apt-sample-1",
+      "client_sample": "Sample Client A",
+      "service": "Kalahari facial",
+      "date": "2026-11-03",
+      "time": "10:00",
+      "status": "confirmed"
+    },
+    {
+      "id": "apt-sample-2",
+      "client_sample": "Sample Client B",
+      "service": "Kalahari facial",
+      "date": "2026-11-03",
+      "time": "11:30",
+      "status": "confirmed"
+    }
+  ],
+  "toast_spec": {
+    "success": "Booking confirmed",
+    "error": "Something went wrong - nothing was booked",
+    "info": "Reminder sent (prototype)",
+    "position": "bottom-right",
+    "auto_dismiss_ms": 4000,
+    "must_not_block_action": true
+  },
+  "confirm_dialog_spec": {
+    "cancel_booking": "Show dialog: 'Cancel this booking?' with Cancel / Confirm cancel. Only cancel on Confirm.",
+    "delete_client_or_pet": "Show dialog with what will be deleted. Only delete on Confirm.",
+    "reschedule": "Show summary of old and new slot, Confirm to move."
+  }
+}

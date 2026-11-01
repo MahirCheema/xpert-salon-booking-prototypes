@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "prototype": "static-data-only",
+  "client": "Kapsalon van Haaren",
+  "slug": "kapsalon-van-haaren",
+  "type": "Hair salon",
+  "city": "Nijmegen",
+  "website": "https://www.kapsalonvanhaaren.nl/",
+  "priority": "Warm",
+  "problem": "Appointment-only, but the appointment still has to arrive by phone or WhatsApp message. No online calendar was visible.",
+  "contact": {
+    "phone": "024-3224381",
+    "address": "Bloemerstraat 64, 6511 EL Nijmegen",
+    "whatsapp": "06-29812429"
+  },
+  "theme": {
+    "status": "fallback - to confirm against live site CSS/visual check",
+    "primary": "#1A1A1A",
+    "accent": "#7A2E3A",
+    "background": "#FFFFFF",
+    "surface": "#F5F2F2",
+    "text": "#1A1A1A",
+    "vibe": "Simple, traditional, price-list-led; 'Al meer dan 100 jaar'"
+  },
+  "hours": {
+    "Mon-Sat": "09:00-18:00",
+    "Sun": "Closed"
+  },
+  "services": [
+    {
+      "name": "Cut",
+      "duration_min": 45,
+      "price_from_eur": 27
+    },
+    {
+      "name": "Cut - student",
+      "duration_min": 45,
+      "price_eur": 25
+    },
+    {
+      "name": "Colour / highlights",
+      "duration_min": 90,
+      "price_eur_min": 37.5,
+      "price_eur_max": 85
+    }
+  ],
+  "staff_sample": [
+    {
+      "id": "staff-1",
+      "role": "Owner / stylist",
+      "name_sample": "Sample Stylist 1"
+    },
+    {
+      "id": "staff-2",
+      "role": "Stylist / groomer",
+      "name_sample": "Sample Stylist 2"
+    }
+  ],
+  "features": [
+    "online_calendar",
+    "student_pricing",
+    "phone_whatsapp_as_second_route",
+    "automatic_reminders",
+    "rebooking_nudges"
+  ],
+  "booking_flow": [
+    "Choose service",
+    "Choose staff (or 'first available')",
+    "Choose date and time from available slots only",
+    "Enter client details and, where relevant, pet / skin / pre-visit notes",
+    "Review summary",
+    "Confirm - see confirm dialog",
+    "Toast: booking confirmed",
+    "Reminder (prototype: simulated)"
+  ],
+  "static_data_note": "All prices, staff names and appointments in this prototype are SAMPLE data, except prices explicitly listed as public prices in the lead reports. Replace with the client's real data before any live use. No real client records are included.",
+  "sample_appointments": [
+    {
+      "id": "apt-sample-1",
+      "client_sample": "Sample Client A",
+      "service": "Cut",
+      "date": "2026-11-03",
+      "time": "10:00",
+      "status": "confirmed"
+    },
+    {
+      "id": "apt-sample-2",
+      "client_sample": "Sample Client B",
+      "service": "Cut",
+      "date": "2026-11-03",
+      "time": "11:30",
+      "status": "confirmed"
+    }
+  ],
+  "toast_spec": {
+    "success": "Booking confirmed",
+    "error": "Something went wrong - nothing was booked",
+    "info": "Reminder sent (prototype)",
+    "position": "bottom-right",
+    "auto_dismiss_ms": 4000,
+    "must_not_block_action": true
+  },
+  "confirm_dialog_spec": {
+    "cancel_booking": "Show dialog: 'Cancel this booking?' with Cancel / Confirm cancel. Only cancel on Confirm.",
+    "delete_client_or_pet": "Show dialog with what will be deleted. Only delete on Confirm.",
+    "reschedule": "Show summary of old and new slot, Confirm to move."
+  }
+}
