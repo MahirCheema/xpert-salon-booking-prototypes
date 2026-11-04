@@ -47,13 +47,23 @@
   "staff_sample": [
     {
       "id": "staff-1",
-      "role": "Owner / stylist",
-      "name_sample": "Sample Stylist 1"
+      "role": "Directeur & Meesterkapper",
+      "name_sample": "Dhr. Van Haaren"
     },
     {
       "id": "staff-2",
-      "role": "Stylist / groomer",
-      "name_sample": "Sample Stylist 2"
+      "role": "Barbier & Heren Stylist",
+      "name_sample": "Bram"
+    },
+    {
+      "id": "staff-3",
+      "role": "Kleurspecialist",
+      "name_sample": "Lucas"
+    },
+    {
+      "id": "staff-4",
+      "role": "Dameskapper",
+      "name_sample": "Emma"
     }
   ],
   "features": [
@@ -77,7 +87,7 @@
   "sample_appointments": [
     {
       "id": "apt-sample-1",
-      "client_sample": "Sample Client A",
+      "client_sample": "Sophie van Dijk",
       "service": "Cut",
       "date": "2026-11-03",
       "time": "10:00",
@@ -85,7 +95,7 @@
     },
     {
       "id": "apt-sample-2",
-      "client_sample": "Sample Client B",
+      "client_sample": "Jan de Vries",
       "service": "Cut",
       "date": "2026-11-03",
       "time": "11:30",

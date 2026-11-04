@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bgBenjamin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706" /><stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="100" fill="url(#bgBenjamin)" />
+  <circle cx="100" cy="85" r="40" fill="#fed7aa" />
+  <!-- Hair & Trimmed Beard -->
+  <path d="M60 76 C60 46, 140 46, 140 76 C134 58, 66 58, 60 76 Z" fill="#451a03" />
+  <path d="M74 102 Q100 130 126 102 Q100 120 74 102 Z" fill="#451a03" />
+  <ellipse cx="88" cy="84" rx="3.5" ry="4.5" fill="#451a03" />
+  <ellipse cx="112" cy="84" rx="3.5" ry="4.5" fill="#451a03" />
+  <path d="M94 98 Q100 102 106 98" stroke="#451a03" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <!-- Shoulders -->
+  <path d="M34 190 C34 146, 70 140, 100 140 C130 140, 166 146, 166 190 Z" fill="#78350f" />
+</svg>
+

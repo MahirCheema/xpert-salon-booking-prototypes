@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bgCharlotte" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" /><stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="100" fill="url(#bgCharlotte)" />
+  <circle cx="100" cy="90" r="38" fill="#fef08a" />
+  <!-- Blonde Bob Cut -->
+  <path d="M58 84 C54 130, 60 160, 68 170 C60 130, 66 76, 100 54 C134 76, 140 130, 132 170 C140 160, 146 130, 142 84 C142 46, 58 46, 58 84 Z" fill="#ca8a04" />
+  <ellipse cx="88" cy="88" rx="3.5" ry="4.5" fill="#713f12" />
+  <ellipse cx="112" cy="88" rx="3.5" ry="4.5" fill="#713f12" />
+  <path d="M93 105 Q100 110 107 105" stroke="#be123c" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <!-- Shoulders -->
+  <path d="M38 190 C38 150, 72 144, 100 144 C128 144, 162 150, 162 190 Z" fill="#065f46" />
+</svg>
+

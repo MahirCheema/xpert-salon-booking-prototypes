@@ -1,0 +1,41 @@
+{
+  "name": "xpert-salon-booking-prototypes",
+  "version": "1.0.0",
+  "description": "Standalone React 19 + Tailwind v4 booking prototypes for 12 Dutch salons, built for Xpert Solutions.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite",
+    "test": "node --test tests/*.test.js",
+    "sync": "node scripts/sync-configs.js"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.16.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.0",
+    "zustand": "^5.0.16"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^6.2.0"
+  },
+  "keywords": [
+    "salon-booking",
+    "prototype",
+    "xpert-solutions",
+    "react-19",
+    "tailwindcss-v4"
+  ],
+  "author": "Xpert Solutions",
+  "license": "UNLICENSED",
+  "private": true
+}

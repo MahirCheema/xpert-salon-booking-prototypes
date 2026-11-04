@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bgSamira" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" /><stop offset="100%" stop-color="#be185d" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="100" fill="url(#bgSamira)" />
+  <circle cx="100" cy="90" r="40" fill="#fde68a" />
+  <!-- Long dark hair -->
+  <path d="M55 90 C50 145, 60 170, 70 180 C60 140, 65 80, 100 55 C135 80, 140 140, 130 180 C140 170, 150 145, 145 90 C145 50, 55 50, 55 90 Z" fill="#18181b" />
+  <ellipse cx="88" cy="88" rx="4" ry="5" fill="#18181b" />
+  <ellipse cx="112" cy="88" rx="4" ry="5" fill="#18181b" />
+  <path d="M93 105 Q100 112 107 105" stroke="#be185d" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <!-- Stylish top -->
+  <path d="M40 190 C40 150, 75 145, 100 145 C125 145, 160 150, 160 190 Z" fill="#3f3f46" />
+</svg>

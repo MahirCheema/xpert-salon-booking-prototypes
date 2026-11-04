@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --color-primary-50: color-mix(in srgb, var(--primary, #3b82f6) 8%, white);
+  --color-primary-100: color-mix(in srgb, var(--primary, #3b82f6) 15%, white);
+  --color-primary-200: color-mix(in srgb, var(--primary, #3b82f6) 28%, white);
+  --color-primary-300: color-mix(in srgb, var(--primary, #3b82f6) 45%, white);
+  --color-primary-400: color-mix(in srgb, var(--primary, #3b82f6) 70%, white);
+  --color-primary-500: var(--primary, #3b82f6);
+  --color-primary-600: var(--primary, #2563eb);
+  --color-primary-700: color-mix(in srgb, var(--primary, #2563eb) 80%, black);
+  --color-primary-800: color-mix(in srgb, var(--primary, #2563eb) 65%, black);
+  --color-primary-900: color-mix(in srgb, var(--primary, #2563eb) 50%, black);
+
+  --color-secondary-50: #f8fafc;
+  --color-secondary-100: #f1f5f9;
+  --color-secondary-200: #e2e8f0;
+  --color-secondary-300: #cbd5e1;
+  --color-secondary-400: #94a3b8;
+  --color-secondary-500: #64748b;
+  --color-secondary-600: #475569;
+  --color-secondary-700: #334155;
+  --color-secondary-800: #1e293b;
+  --color-secondary-900: #0f172a;
+
+  --color-success-50: #ecfdf5;
+  --color-success-100: #d1fae5;
+  --color-success-200: #a7f3d0;
+  --color-success-500: #10b981;
+  --color-success-600: #059669;
+  --color-success-700: #047857;
+
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+
+  --color-info-50: #f0f9ff;
+  --color-info-100: #e0f2fe;
+  --color-info-200: #bae6fd;
+  --color-info-500: #0ea5e9;
+  --color-info-600: #0284c7;
+  --color-info-700: #0369a1;
+
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+
+  --spacing-sidebar: 16rem;
+  --spacing-topbar: 4.25rem;
+
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+}
+
+:root {
+  --primary: #1F1F23;
+  --accent: #C9A227;
+  --background: #f8fafc;
+  --surface: #FFFFFF;
+  --text: #0f172a;
+  --border: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Sleek modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Explicitly hide scrollbar on sidebar nav and any .no-scrollbar element */
+aside nav::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+aside nav {
+  display: flex !important;
+  flex-direction: column !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+.no-scrollbar {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+

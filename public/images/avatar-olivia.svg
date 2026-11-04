@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bgOlivia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" /><stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="100" fill="url(#bgOlivia)" />
+  <circle cx="100" cy="92" r="38" fill="#fde68a" />
+  <!-- Stylish hair -->
+  <path d="M60 85 C55 135, 62 165, 72 175 C64 135, 68 78, 100 55 C132 78, 136 135, 128 175 C138 165, 145 135, 140 85 C140 45, 60 45, 60 85 Z" fill="#312e81" />
+  <ellipse cx="89" cy="90" rx="3.5" ry="4.5" fill="#1e1b4b" />
+  <ellipse cx="111" cy="90" rx="3.5" ry="4.5" fill="#1e1b4b" />
+  <path d="M94 106 Q100 112 106 106" stroke="#db2777" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <!-- Shoulders -->
+  <path d="M40 190 C40 152, 72 146, 100 146 C128 146, 160 152, 160 190 Z" fill="#4c1d95" />
+</svg>
+

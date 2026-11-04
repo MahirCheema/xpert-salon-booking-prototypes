@@ -52,13 +52,23 @@
   "staff_sample": [
     {
       "id": "staff-1",
-      "role": "Owner / stylist",
-      "name_sample": "Sample Stylist 1"
+      "role": "Allround Trimsalonspecialist",
+      "name_sample": "Marloes"
     },
     {
       "id": "staff-2",
-      "role": "Stylist / groomer",
-      "name_sample": "Sample Stylist 2"
+      "role": "Rijksgediplomeerd Trimmer & Puppy Coach",
+      "name_sample": "Tim"
+    },
+    {
+      "id": "staff-3",
+      "role": "Grooming Assistent",
+      "name_sample": "Sophie"
+    },
+    {
+      "id": "staff-4",
+      "role": "Grote Rassen Specialist",
+      "name_sample": "Jesse"
     }
   ],
   "features": [
@@ -83,7 +93,7 @@
   "sample_appointments": [
     {
       "id": "apt-sample-1",
-      "client_sample": "Sample Client A",
+      "client_sample": "Sophie van Dijk",
       "service": "Complete coat care",
       "date": "2026-11-03",
       "time": "10:00",
@@ -91,7 +101,7 @@
     },
     {
       "id": "apt-sample-2",
-      "client_sample": "Sample Client B",
+      "client_sample": "Jan de Vries",
       "service": "Complete coat care",
       "date": "2026-11-03",
       "time": "11:30",

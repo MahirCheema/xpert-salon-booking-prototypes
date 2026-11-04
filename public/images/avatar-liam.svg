@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bgLiam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" /><stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="100" fill="url(#bgLiam)" />
+  <circle cx="100" cy="88" r="40" fill="#fde68a" />
+  <!-- Short modern crop -->
+  <path d="M62 76 C62 48, 138 48, 138 76 C130 58, 70 58, 62 76 Z" fill="#0f172a" />
+  <ellipse cx="88" cy="86" rx="3.5" ry="4.5" fill="#0f172a" />
+  <ellipse cx="112" cy="86" rx="3.5" ry="4.5" fill="#0f172a" />
+  <path d="M94 104 Q100 108 106 104" stroke="#0f172a" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <!-- Shoulders -->
+  <path d="M36 190 C36 148, 70 142, 100 142 C130 142, 164 148, 164 190 Z" fill="#0369a1" />
+</svg>
+

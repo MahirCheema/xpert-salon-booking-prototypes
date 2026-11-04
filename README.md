@@ -1,54 +1,155 @@
-# Xpert Salon Booking Prototypes
+# Xpert Salon Booking Prototypes - React 19 & Tailwind CSS v4
 
-Prototype-only booking systems for Dutch hair, beauty and animal-grooming salons, built for Xpert Solutions (https://xpertsolutions.nl/).
+Interactive, demo-ready salon booking prototypes for 12 Dutch hair, beauty, and animal grooming salons, built for [Xpert Solutions](https://xpertsolutions.nl/) using **React 19**, **Tailwind CSS v4**, dedicated Toast and Confirm Dialog component systems, and full bilingual support (**Dutch & English** toggle).
 
-**This repo is a prototype, not a live system.** All data is static/sample data. No real client records, payments, or live bookings are included. Replace sample data with the client's real data, and complete the production checklist in Phases.md, before any live use.
+**This repo is a prototype, not a live production database.** All initial data is static/sample data tagged with `[SAMPLE]`. No real credit cards or external SMS gateways are connected.
 
-## Clients in this repo (12)
+---
 
-| Client | Slug | Problem in one line |
-|---|---|---|
-| Kapsalon ISSA, Oisterwijk | `kapsalon-issa` | No clear booking calendar; phone/walk-in interruptions |
-| Violetta's Dog Grooming, Zuidhorn | `violettas-dog-grooming` | Solo, message-first, no calendar/CRM/reminders |
-| Trimsalon Limbo, Venlo | `trimsalon-limbo` | WhatsApp photo first, email 2 days, no calendar/intake |
-| Hondentrimsalon Finn, Den Haag | `hondentrimsalon-finn` | Groomer is also receptionist; bookings wait on messages |
-| Kapsalon Faya, Groningen | `kapsalon-faya` | Walk-in or call only; no booking widget |
-| Trimsalon het Hofje, Haarlem | `trimsalon-het-hofje` | Phone-only; pre-visit medical/coat info by phone |
-| Schoonheidssalon Yourbeauty, Breda | `salonyourbeauty` | No booking or treatment-course tracking |
-| Kapsalon van Haaren, Nijmegen | `kapsalon-van-haaren` | Appointment-only by phone/WhatsApp; no calendar |
-| Polat Beauty, Eindhoven | `polat-beauty` | Directory-led; no verified booking/course tracking |
-| De Kleinste Kapsalon, Rotterdam | `de-kleinste-kapsalon` | Phone-only, ask for Osman; no calendar/CRM |
-| Feel Smooth, Utrecht | `feel-smooth` | Appointment route unverified; no course tracking |
-| Kapsalon Headline, Amsterdam | `kapsalon-headline` | Phone-led; no visible calendar/CRM in sources checked |
+## 🌟 Key Features
 
-Each client has its own folder under `clients/<slug>/` with `config.json` (business, problem, theme, hours, services, features, booking flow, toast spec, confirm-dialog spec, sample appointments) and a short `README.md`.
+1. **React 19 & Tailwind CSS v4 Architecture**:
+   - Modern React 19 hooks and CSS-first Tailwind v4 styling with `@import "tailwindcss";`, `@theme` design tokens, and CSS custom properties (`--primary`, `--accent`, `--surface`, `--background`, `--text`).
+   - Path aliases configured (`@/*` -> `./src/*`).
 
-## Antigravity docs - read in this order
+2. **Dedicated Toast & Confirm Dialog Component Systems in Separate Folders**:
+   - `src/components/ui/Toast/`: Focuses on non-blocking feedback, fixed at bottom-right, stacking up to 3 toasts with 4000ms auto-dismiss, icons (`CheckCircle2`, `AlertCircle`, `XCircle`, `Info`), and manual close.
+   - `src/components/ui/Dialog/`: Accessible modal dialogs with focus trapping, backdrop blur, Escape key dismissal, and promise-based confirmation (`useConfirm()`) with destructive action labels and loading states.
 
-1. `Architecture.md` - what to build, and how it fits together
-2. `Phases.md` - build order, from static prototype to production-ready
-3. `Database.md` - data model, even though the prototype uses static data
-4. `Prompts.md` - copy-paste prompts for Antigravity, per client and per feature
-5. `Security.md` - what must never be in a prototype, and what production needs
-6. `Error-Handling.md` - every failure case, and what the user must see
+3. **12 Standalone Salon Prototypes in Separate Folders**:
+   - Every salon has its own standalone prototype directory under `clients/<slug>/` containing its `index.html`, `main.tsx`, `config.json`, and `README.md`.
+   - Each prototype can run completely independently or through the unified hub.
 
-## How to build one client in Antigravity
+4. **Full Bilingual Support (Dutch & English Toggle)**:
+   - Instant header toggle (**NL / EN**) powered by `I18nProvider`.
+   - Complete localized translations for all 6 booking steps, service cards, error toasts, confirm dialogs, admin timelines, and client dossiers.
 
-1. Open `clients/<slug>/config.json` and copy its theme, services, hours and features into the Antigravity prompt.
-2. Use the matching prompt in `Prompts.md` (Prompt A for the core booking flow, then B-G for the extra features).
-3. Build with static data only. Do not connect a real database, payment provider or messaging provider in the prototype phase.
-4. Check the acceptance criteria in `Phases.md` Phase 1 before moving on: available slots only, no double booking in the prototype state, toast on every outcome, confirm dialog on every destructive action.
+5. **Pure 15-Minute Slot Engine**:
+   - Pure mathematical slot calculation adhering to 15-minute grid intervals.
+   - Treatment duration buffers: 10 minutes for long/colour/groom treatments, 5 minutes for short treatments.
+   - Opening hours boundary enforcement (long treatments crossing closing times are never offered).
+   - Single-diary mode for *Trimsalon Limbo* (only one animal at a time salon-wide).
+   - Fallback `getNextAvailableDate` if a day is fully booked or closed.
 
-## Non-negotiable prototype rules
+6. **Admin Dashboard & Salon Tooling**:
+   - Interactive day timeline with bookings.
+   - Full booking table with status filter and sample markers.
+   - Client and pet dossiers with coat type, medical flags, and quiet room preferences.
+   - Beauty treatment course tracker with session progress and skin analysis notes.
+   - Walk-in queue manager with wait times and status transitions (*waiting* -> *in_chair* -> *completed*).
 
-- **Toast on every outcome.** Success, error and info toasts, bottom-right, auto-dismiss 4 seconds, never blocking the page. A booking, cancellation, reschedule, reminder or save that shows no toast is a failed build.
-- **Confirm dialog on every destructive action.** Cancel, delete, and reschedule all require an explicit Confirm click. No action may happen on the first click alone.
-- **Available slots only.** Never show a slot that is already booked, outside opening hours, or shorter than the service duration. Overlapping services, double-booked staff and back-to-back bookings with no buffer are bugs, not features.
-- **Static data only.** Sample clients, staff and appointments are labelled SAMPLE in the config. Do not present them as real clients.
-- **Theme per client.** Use that client's `config.json` theme. Themes in this repo are labelled fallback until a visual/CSS check of the live site replaces them - see Architecture.md, Theme note. Do not present a fallback theme to a client as "your exact site theme".
+7. **Error Simulation Panel (`Error-Handling.md`)**:
+   - Simulated slot race condition ("That slot was just taken. Please choose another time.").
+   - Simulated network failure with active retry button.
+   - Reset sample data with focus-trapped confirm dialog.
 
-## Repo
+---
 
-- GitHub: https://github.com/MahirCheema/xpert-salon-booking-prototypes
-- Branch: `main`
-- Language: English in code and docs; client-facing Dutch copy (buttons, toasts, dialogs) must be in Dutch, with English only where the client site itself uses English.
+## 🏢 The 12 Salon Prototypes
+
+| # | Client | Slug | Industry & City | Specific Features & Problems Solved |
+|---|---|---|---|---|
+| 1 | **Kapsalon ISSA** | `kapsalon-issa` | Hair • Oisterwijk | Walk-in queue view, per-service duration buffers, no-phone calendar |
+| 2 | **Violetta's Dog Grooming** | `violettas-dog-grooming` | Dog Grooming • Zuidhorn | Solo groomer, 24h cancellation notice, pet profile with breed/coat |
+| 3 | **Trimsalon Limbo** | `trimsalon-limbo` | Grooming • Venlo | Single-diary mode (one pet at a time), multi-species (dog, cat, rabbit) |
+| 4 | **Hondentrimsalon Finn** | `hondentrimsalon-finn` | Grooming • Den Haag | Puppy habituation session (30 min), medical alerts & coat checks |
+| 5 | **Kapsalon Faya** | `kapsalon-faya` | Hair • Groningen | Adult vs Child student rates, walk-in and booked appointments |
+| 6 | **Trimsalon het Hofje** | `trimsalon-het-hofje` | Grooming • Haarlem | Cat separate quiet room flag, long treatment slots (120m) |
+| 7 | **Schoonheidssalon Yourbeauty** | `salonyourbeauty` | Beauty • Breda | Kalahari facial courses, skin analysis notes per visit, progress tracker |
+| 8 | **Kapsalon van Haaren** | `kapsalon-van-haaren` | Hair • Nijmegen | Student pricing sample, WhatsApp confirmation fallback route |
+| 9 | **Polat Beauty** | `polat-beauty` | Beauty • Eindhoven | Multi-session laser and facial course tracking (6 sessions) |
+| 10 | **De Kleinste Kapsalon** | `de-kleinste-kapsalon` | Hair • Rotterdam | Solo barber (Osman), personal chair, direct call confirmation |
+| 11 | **Feel Smooth** | `feel-smooth` | Beauty • Utrecht | Wax and laser courses, progress tracking, skin preparation |
+| 12 | **Kapsalon Headline** | `kapsalon-headline` | Hair • Amsterdam | Technical cut and color, chemical history notes, consultation |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install dependencies
+```bash
+npm install
+```
+
+### 2. Run the development server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view the unified prototype portal.
+
+### 3. Build for production
+```bash
+npm run build
+```
+This builds both the unified hub (`dist/index.html`) and all 12 standalone prototypes (`dist/clients/<slug>/index.html`) using Rollup multi-page inputs.
+
+### 4. Run automated test suite
+```bash
+npm test
+```
+Executes all 17 automated tests verifying slot calculations, double-booking prevention, single-diary enforcement, buffers, data store operations, and config validity.
+
+---
+
+## 📂 Project Structure
+
+```
+xpert-salon-booking-prototypes/
+├── clients/                          # 12 Standalone Salon Directories
+│   ├── kapsalon-issa/
+│   │   ├── config.json               # Business data, theme, hours, services
+│   │   ├── index.html                # Standalone HTML entry
+│   │   ├── main.tsx                  # Standalone React 19 mount
+│   │   └── README.md                 # Salon documentation
+│   ├── violettas-dog-grooming/
+│   └── ... (all 12 salons)
+├── src/
+│   ├── app/
+│   │   ├── App.tsx                   # Main application orchestrator
+│   │   └── main.tsx                  # Root mount
+│   ├── components/
+│   │   ├── ShellHeader.tsx           # Salon switcher, view toggle, hours modal, NL/EN switch
+│   │   ├── BookingFlow.tsx           # 6-step customer booking flow
+│   │   ├── AdminDashboard.tsx        # Timeline, bookings, dossiers, courses, walk-in
+│   │   ├── ErrorSimulator.tsx        # Testing bar for Error-Handling.md scenarios
+│   │   └── ui/
+│   │       ├── Toast/                # DEDICATED TOAST FOLDER
+│   │       │   ├── Toast.tsx
+│   │       │   ├── ToastProvider.tsx
+│   │       │   ├── useToast.ts
+│   │       │   ├── toast.types.ts
+│   │       │   └── index.ts
+│   │       ├── Dialog/               # DEDICATED CONFIRM DIALOG FOLDER
+│   │       │   ├── Dialog.tsx
+│   │       │   ├── ConfirmDialog.tsx
+│   │       │   ├── ConfirmDialogProvider.tsx
+│   │       │   ├── useConfirm.ts
+│   │       │   ├── dialog.types.ts
+│   │       │   └── index.ts
+│   │       ├── Button/               # Accessible button components
+│   │       ├── Badge/                # Status badges (including [SAMPLE])
+│   │       └── Card/                 # Reusable surface card
+│   ├── core/
+│   │   ├── slot-engine.ts            # Pure 15-minute slot engine & buffers
+│   │   └── data-store.ts             # State store, localStorage sync & SAMPLE data
+│   ├── i18n/
+│   │   ├── translations.ts           # Complete bilingual dictionary (NL & EN)
+│   │   └── I18nContext.tsx           # Locale provider & useI18n hook
+│   └── styles/
+│       └── index.css                 # Tailwind CSS v4 and theme variables
+├── tests/                            # 17 automated unit tests
+├── Architecture.md                   # System design & architecture principles
+├── Database.md                       # Contract schema & entities
+├── Error-Handling.md                 # Complete error states & toast/dialog rules
+├── package.json                      # React 19, Tailwind v4, Vite 6
+└── vite.config.ts                    # Multi-entry build configuration
+```
+
+---
+
+## 🛡️ Prototype Rules & Compliance
+
+- **No live API keys or external services:** All SMS, WhatsApp, and email messages are simulated and tagged with `[SAMPLE]`.
+- **Destructive action safety:** Confirm dialogs are required for cancel, reschedule, and data resets.
+- **Auto-dismissing toasts:** All user feedback is displayed through bottom-right toasts (4000ms auto-dismiss) without obstructing forms.
+- **Bilingual accuracy:** Both Dutch and English versions provide professional, non-technical terminology suitable for salon owners and customers.

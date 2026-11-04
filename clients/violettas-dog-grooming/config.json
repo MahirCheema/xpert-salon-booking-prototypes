@@ -61,13 +61,23 @@
   "staff_sample": [
     {
       "id": "staff-1",
-      "role": "Owner / stylist",
-      "name_sample": "Sample Stylist 1"
+      "role": "Gediplomeerd Hondentrimmer & Eigenaar",
+      "name_sample": "Violetta"
     },
     {
       "id": "staff-2",
-      "role": "Stylist / groomer",
-      "name_sample": "Sample Stylist 2"
+      "role": "Allround Groomer",
+      "name_sample": "Lars"
+    },
+    {
+      "id": "staff-3",
+      "role": "Vacht- & Huidverzorging",
+      "name_sample": "Maria"
+    },
+    {
+      "id": "staff-4",
+      "role": "Bad & Föhn Specialist",
+      "name_sample": "Elena"
     }
   ],
   "features": [
@@ -92,7 +102,7 @@
   "sample_appointments": [
     {
       "id": "apt-sample-1",
-      "client_sample": "Sample Client A",
+      "client_sample": "Sophie van Dijk",
       "service": "Full groom - small dog",
       "date": "2026-11-03",
       "time": "10:00",
@@ -100,7 +110,7 @@
     },
     {
       "id": "apt-sample-2",
-      "client_sample": "Sample Client B",
+      "client_sample": "Jan de Vries",
       "service": "Full groom - small dog",
       "date": "2026-11-03",
       "time": "11:30",

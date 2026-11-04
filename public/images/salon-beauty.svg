@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="beautyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95" />
+      <stop offset="50%" stop-color="#701a75" />
+      <stop offset="100%" stop-color="#3b0764" />
+    </linearGradient>
+    <linearGradient id="roseGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#fb7185" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#beautyBg)" />
+  <circle cx="680" cy="120" r="170" fill="#c084fc" opacity="0.18" />
+  <circle cx="560" cy="350" r="160" fill="#f472b6" opacity="0.15" />
+  
+  <!-- Serene Profile Silhouette & Botanical Lotus -->
+  <g transform="translate(550, 100)">
+    <path d="M120 40 C70 40, 50 80, 50 120 C50 160, 75 190, 85 220 L160 220 C170 180, 190 140, 190 100 C190 60, 160 40, 120 40 Z" fill="#fdf4ff" opacity="0.9" />
+    <path d="M70 120 Q95 110 110 125" stroke="#a21caf" stroke-width="3" fill="none" stroke-linecap="round" />
+    <!-- Botanical Leaf / Kalahari Flora -->
+    <path d="M40 210 Q80 160 60 110 Q10 160 40 210 Z" fill="#fbcfe8" opacity="0.75" />
+    <path d="M170 210 Q210 160 190 110 Q140 160 170 210 Z" fill="#fbcfe8" opacity="0.75" />
+  </g>
+  <!-- Sparkles & Droplets -->
+  <circle cx="480" cy="140" r="8" fill="#f472b6" opacity="0.7" />
+  <polygon points="510,80 514,95 529,99 514,103 510,118 506,103 491,99 506,95" fill="#fde047" />
+</svg>

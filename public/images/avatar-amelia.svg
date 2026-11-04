@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bgAmelia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c026d3" /><stop offset="100%" stop-color="#9333ea" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="100" fill="url(#bgAmelia)" />
+  <circle cx="100" cy="92" r="38" fill="#fed7aa" />
+  <!-- Curly voluminous dark hair -->
+  <path d="M52 86 C46 142, 54 172, 66 180 C56 138, 62 76, 100 52 C138 76, 144 138, 134 180 C146 172, 154 142, 148 86 C148 44, 52 44, 52 86 Z" fill="#172554" />
+  <ellipse cx="88" cy="90" rx="3.5" ry="4.5" fill="#0f172a" />
+  <ellipse cx="112" cy="90" rx="3.5" ry="4.5" fill="#0f172a" />
+  <path d="M93 107 Q100 113 107 107" stroke="#9d174d" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <!-- Shoulders -->
+  <path d="M36 190 C36 150, 70 145, 100 145 C130 145, 164 150, 164 190 Z" fill="#581c87" />
+</svg>
+
